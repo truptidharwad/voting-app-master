@@ -1,0 +1,85 @@
+@import 'functions';
+
+.account {
+    flex: 0 0 auto;
+    position: relative;
+
+    &__login {
+        display: flex;
+        border: none;
+        outline: none;
+        color: getColor(white);
+        background: getColor(elephant);
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+        font-size: 13px;
+        cursor: pointer;
+        align-items: center;
+
+        &:hover {
+            background: black;
+        }
+
+        &:active {
+            background: getColor(elephant)
+        }
+
+        svg {
+            padding-left: 5px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__info {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 12.8px;
+        margin: 0 0.5em;
+        justify-content: space-around;
+        text-align: right;
+    }
+
+    &__title {
+        font-weight: 600;
+    }
+
+    &__separator {
+        margin: 0 0.5em;
+        color: getColor(alto);
+    }
+
+    &__currency {
+        cursor: help;
+
+        &:last-child {
+            margin-left: 1em;
+        }
+
+        & :last-child {
+            margin-left: 0.5em;
+        }
+    }
+
+    &__avatar {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        font-size: 12.8px;
+        line-height: 2.75;
+        text-align: center;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        background: whitesmoke;
+        overflow: hidden;
+        transition: background 250ms;
+
+        &:hover {
+            background: getColor(alto);
+        }
+    }
+}

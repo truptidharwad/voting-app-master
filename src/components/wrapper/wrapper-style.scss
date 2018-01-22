@@ -1,0 +1,69 @@
+@import 'vars';
+@import 'mixins';
+@import 'functions';
+
+.wrapper {
+    margin: 1.5em;
+
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        flex: 1 1 auto;
+        margin: 0;
+        font-size: 2em;
+    }
+
+    &__description {
+        margin: 1em 0;
+        line-height: 1.5;
+    }
+
+    &__influences {
+        display: flex;
+        margin-bottom: 1em;
+    }
+
+    &__topics {
+        padding: 0;
+        list-style: none;
+    }
+
+    &__new {
+        text-align: center;
+    }
+
+    &__add {
+        font-size: 14px;
+        font-weight: 600;
+        color: getColor(denim);
+        cursor: pointer;
+        transition: color 250ms;
+
+        &:hover {
+            color: getColor(fiord);
+        }
+    }
+
+    @media (max-width: 720px) {
+        & [class*="__top"] {
+            flex-direction: column;
+            align-items: flex-start;
+
+            & .account__info {
+                order: 2;
+                text-align: left;
+            }
+        }
+
+        & [class*="__influences"] {
+            flex-direction: column;
+
+            & .influence {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}

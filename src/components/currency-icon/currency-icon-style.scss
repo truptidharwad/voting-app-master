@@ -1,0 +1,9 @@
+@import 'functions';
+
+.currency-icon {
+    display: inline-block;
+
+    &--influence { fill: getColor(denim); }
+    &--goldenInfluence { fill: #f9bf3b; }
+    &--support { fill: green; }
+}
